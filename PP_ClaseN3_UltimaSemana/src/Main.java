@@ -2,12 +2,16 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
+        //Creo el objeto alumno
         Alumno alumno=new Alumno("Leandro","Cortez",45876507,17);
+        //Creo la conexion con el servidor
         Conexion conexion=new Conexion("jdbc:mysql://localhost:3306/prueba","root","");
         Connection con= conexion.getConexion();
-        String querry="INSERT INTO alumno (Nombre, Edad, Dni, Apellido) VALUES (?,?,?,?)";
+        //Creo el insert para poder ingresar alumnos.
+        String inserAlumno="INSERT INTO alumno (Nombre, Edad, Dni, Apellido) VALUES (?,?,?,?)";
         try{
-            PreparedStatement ps=con.prepareStatement(querry);
+            //Inserto el alumno en la BD
+            PreparedStatement ps=con.prepareStatement(inserAlumno);
             ps.setString(1,alumno.getNombre());
             ps.setInt(2,alumno.getEdad());
             ps.setInt(3,alumno.getDni());
