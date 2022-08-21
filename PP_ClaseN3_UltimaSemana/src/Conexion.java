@@ -12,6 +12,7 @@ public class Conexion {
         this.uRL=uRL;
         this.usuario=usuario;
         this.contrasena=contrasena;
+        CrearConexion();
     }
 
     public Connection getConexion() {
@@ -48,8 +49,9 @@ public class Conexion {
     public void CrearConexion(){
         try{
            conexion=DriverManager.getConnection(uRL,usuario,contrasena);
-
+            System.out.println("Funciona");
         }catch (SQLException e){
+            System.out.println("No funciono");
             throw new RuntimeException(e);
         }
     }

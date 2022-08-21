@@ -1,12 +1,12 @@
 public class Alumno {
     private String nombre;
     private String apellido;
-    private String dni;
-    private String edad;
+    private int dni;
+    private int edad;
     public Alumno(){
 
     }
-    public Alumno(String nombre,String apellido,String dni,String edad){
+    public Alumno(String nombre,String apellido,int dni,int edad){
         this.nombre=nombre;
         this.apellido=apellido;
         this.dni=dni;
@@ -28,19 +28,19 @@ public class Alumno {
         this.apellido = apellido;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 }
