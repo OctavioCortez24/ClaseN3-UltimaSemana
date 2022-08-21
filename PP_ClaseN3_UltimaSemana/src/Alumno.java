@@ -43,5 +43,10 @@ public class Alumno {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return nombre+" "+apellido+" DNI: "+dni+" Edad: "+edad;
+    }
 }
 

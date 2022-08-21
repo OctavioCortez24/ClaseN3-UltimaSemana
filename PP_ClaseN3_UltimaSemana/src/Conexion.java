@@ -55,4 +55,11 @@ public class Conexion {
             throw new RuntimeException(e);
         }
     }
+    public void Desconectar(){
+        try {
+            conexion.close();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 }
